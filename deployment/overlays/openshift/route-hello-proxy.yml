@@ -4,9 +4,9 @@ metadata:
   labels:
     appName: hello-proxy-lagom-minimal-service
   name: hello-proxy-lagom
-  namespace: lagom-scala-minimal-deployment-example
+  namespace: lagom-java-minimal-deployment-example
   selfLink: >-
-    /apis/route.openshift.io/v1/namespaces/lagom-scala-minimal-deployment-example/routes/hello-proxy-lagom
+    /apis/route.openshift.io/v1/namespaces/lagom-java-minimal-deployment-example/routes/hello-proxy-lagom
 spec:
   host: my-lagom-minimal.example.org
   path: /proxy/rest-hello

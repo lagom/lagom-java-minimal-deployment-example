@@ -4,9 +4,9 @@ metadata:
   labels:
     appName: hello-lagom-minimal-service
   name: hello-lagom
-  namespace: lagom-scala-minimal-deployment-example
+  namespace: lagom-java-minimal-deployment-example
   selfLink: >-
-    /apis/route.openshift.io/v1/namespaces/lagom-scala-minimal-deployment-example/routes/hello-lagom
+    /apis/route.openshift.io/v1/namespaces/lagom-java-minimal-deployment-example/routes/hello-lagom
 spec:
   host: my-lagom-minimal.example.org
   path: /api/hello

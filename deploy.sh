@@ -2,18 +2,21 @@
 
 export OPENSHIFT_SERVER=centralpark.lightbend.com
 export OPENSHIFT_PROJECT=lagom-java-minimal-deployment-example
-export IMAGE_HELLO=hello-lagom
-export IMAGE_HELLO_PROXY=hello-proxy-lagom
-export TAG=1.0-SNAPSHOT
+export IMAGE_HELLO=hello-impl
+export IMAGE_HELLO_PROXY=hello-proxy-impl
+export TAG=1.1-SNAPSHOT
 
 export DOCKER_REGISTRY_SERVER=docker-registry-default.centralpark.lightbend.com
 export DOCKER_REGISTRY=$DOCKER_REGISTRY_SERVER/$OPENSHIFT_PROJECT
 
 TOKEN=$1
 
+oc login https://$OPENSHIFT_SERVER --token=$TOKEN
+
 oc delete project $OPENSHIFT_PROJECT
 # while the project is deleted, we build the docker imges
 mvn clean package docker:build
+sleep 15
 oc new-project    $OPENSHIFT_PROJECT
 
 docker login -p $TOKEN -u unused $DOCKER_REGISTRY_SERVER
