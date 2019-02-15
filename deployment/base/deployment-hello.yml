@@ -45,13 +45,13 @@ spec:
               path: "/ready"
               port: management
             periodSeconds: 10
-            initialDelaySeconds: 90
+            initialDelaySeconds: 120
           livenessProbe:
             httpGet:
               path: "/alive"
               port: management
             periodSeconds: 10
-            initialDelaySeconds: 60
+            initialDelaySeconds: 90
 
           resources:
             limits:

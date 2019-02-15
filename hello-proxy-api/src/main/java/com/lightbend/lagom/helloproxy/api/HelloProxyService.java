@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2019 Lightbend Inc. <https://www.lightbend.com>
  */
-package com.example.helloproxy.api;
+package com.lightbend.lagom.helloproxy.api;
 
 import static com.lightbend.lagom.javadsl.api.Service.named;
 import static com.lightbend.lagom.javadsl.api.Service.restCall;

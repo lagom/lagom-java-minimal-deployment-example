@@ -1,10 +1,10 @@
 /*
  * Copyright (C) 2019 Lightbend Inc. <https://www.lightbend.com>
  */
-package com.example.hello.impl;
+package com.lightbend.lagom.hello.impl;
 
 import akka.NotUsed;
-import com.example.hello.api.HelloService;
+import com.lightbend.lagom.hello.api.HelloService;
 import com.lightbend.lagom.javadsl.api.ServiceCall;
 
 import java.util.UUID;

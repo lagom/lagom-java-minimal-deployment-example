@@ -1,11 +1,11 @@
 /*
  * Copyright (C) 2019 Lightbend Inc. <https://www.lightbend.com>
  */
-package com.example.helloproxy.impl;
+package com.lightbend.lagom.helloproxy.impl;
 
 import akka.NotUsed;
-import com.example.hello.api.HelloService;
-import com.example.helloproxy.api.HelloProxyService;
+import com.lightbend.lagom.hello.api.HelloService;
+import com.lightbend.lagom.helloproxy.api.HelloProxyService;
 import com.lightbend.lagom.javadsl.api.ServiceCall;
 import com.typesafe.config.Config;
 
