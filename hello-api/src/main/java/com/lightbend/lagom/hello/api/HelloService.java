@@ -18,7 +18,7 @@ public interface HelloService extends Service {
   @Override
   default Descriptor descriptor() {
     // @formatter:off
-    return named("hello-lagom-minimal-service").withCalls(
+    return named("hello-lagom-java-openshift-smoketests-service").withCalls(
         pathCall("/api/hello/:id",  this::hello)
       ).withAutoAcl(true);
     // @formatter:on

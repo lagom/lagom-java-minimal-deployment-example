@@ -19,7 +19,7 @@ public interface HelloProxyService extends Service {
 
   @Override
   default Descriptor descriptor() {
-    return named("hello-proxy-lagom-minimal-service")
+    return named("hello-proxy-lagom-java-openshift-smoketests-service")
             .withCalls(
               restCall(Method.GET, "/proxy/rest-hello/:id", this::proxyViaHttp)
             ).withAutoAcl(true);

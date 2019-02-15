@@ -11,8 +11,8 @@ resources:
 
 images:
   - name: "hello-impl"
-    newName: "docker-registry-default.centralpark.lightbend.com/lagom-java-minimal-deployment-example/hello-impl"
+    newName: "docker-registry-default.centralpark.lightbend.com/lagom-java-openshift-smoketests/hello-impl"
     newTag: "1.1-SNAPSHOT"
   - name: "hello-proxy-impl"
-    newName: "docker-registry-default.centralpark.lightbend.com/lagom-java-minimal-deployment-example/hello-proxy-impl"
+    newName: "docker-registry-default.centralpark.lightbend.com/lagom-java-openshift-smoketests/hello-proxy-impl"
     newTag: "1.1-SNAPSHOT"

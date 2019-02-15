@@ -2,31 +2,31 @@
 apiVersion: "apps/v1beta2"
 kind: Deployment
 metadata:
-  name: "hello-lagom-minimal-service-v1-0-snapshot"
+  name: "hello-lagom-java-openshift-smoketests-service-v1-0-snapshot"
   labels:
-    appName: "hello-lagom-minimal-service"
-    appNameVersion: "hello-lagom-minimal-service-v1-0-snapshot"
+    appName: "hello-lagom-java-openshift-smoketests-service"
+    appNameVersion: "hello-lagom-java-openshift-smoketests-service-v1-0-snapshot"
 spec:
   replicas: 3
   selector:
     matchLabels:
-      appNameVersion: "hello-lagom-minimal-service-v1-0-snapshot"
+      appNameVersion: "hello-lagom-java-openshift-smoketests-service-v1-0-snapshot"
   template:
     metadata:
       labels:
-        appName: "hello-lagom-minimal-service"
-        appNameVersion: "hello-lagom-minimal-service-v1-0-snapshot"
+        appName: "hello-lagom-java-openshift-smoketests-service"
+        appNameVersion: "hello-lagom-java-openshift-smoketests-service-v1-0-snapshot"
     spec:
       restartPolicy: Always
       containers:
-        - name: "hello-lagom-minimal-service"
+        - name: "hello-lagom-java-openshift-smoketests-service"
           image: "hello-impl:1.0-SNAPSHOT"
           imagePullPolicy: IfNotPresent
           env:
             - name: "JAVA_OPTS"
               value: "-Dconfig.resource=application-prod.conf -Dplay.server.pidfile.path=/dev/null"
             - name: "DEPLOYMENT_SERVICE_NAME"
-              value: "hello-lagom-minimal-service"
+              value: "hello-lagom-java-openshift-smoketests-service"
           ports:
             # application
             - name: http
