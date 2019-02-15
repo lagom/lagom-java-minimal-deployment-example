@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export OPENSHIFT_SERVER=centralpark.lightbend.com
-export OPENSHIFT_PROJECT=lagom-java-minimal-deployment-example
+export OPENSHIFT_PROJECT=lagom-java-openshift-smoketests
 export IMAGE_HELLO=hello-impl
 export IMAGE_HELLO_PROXY=hello-proxy-impl
 export TAG=1.1-SNAPSHOT

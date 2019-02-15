@@ -4,7 +4,7 @@
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.lightbend.lagom</groupId>
-    <artifactId>lagom-java-minimal-deployment-example</artifactId>
+    <artifactId>lagom-java-openshift-smoketests</artifactId>
     <version>1.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>

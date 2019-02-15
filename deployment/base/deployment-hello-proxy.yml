@@ -2,31 +2,31 @@
 apiVersion: "apps/v1beta2"
 kind: Deployment
 metadata:
-  name: "hello-proxy-lagom-minimal-service-v1-1-snapshot"
+  name: "hello-proxy-lagom-java-openshift-smoketests-service-v1-1-snapshot"
   labels:
-    appName: "hello-proxy-lagom-minimal-service"
-    appNameVersion: "hello-proxy-lagom-minimal-service-v1-1-snapshot"
+    appName: "hello-proxy-lagom-java-openshift-smoketests-service"
+    appNameVersion: "hello-proxy-lagom-java-openshift-smoketests-service-v1-1-snapshot"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      appNameVersion: "hello-proxy-lagom-minimal-service-v1-1-snapshot"
+      appNameVersion: "hello-proxy-lagom-java-openshift-smoketests-service-v1-1-snapshot"
   template:
     metadata:
       labels:
-        appName: "hello-proxy-lagom-minimal-service"
-        appNameVersion: "hello-proxy-lagom-minimal-service-v1-1-snapshot"
+        appName: "hello-proxy-lagom-java-openshift-smoketests-service"
+        appNameVersion: "hello-proxy-lagom-java-openshift-smoketests-service-v1-1-snapshot"
     spec:
       restartPolicy: Always
       containers:
-        - name: "hello-proxy-lagom-minimal-service"
+        - name: "hello-proxy-lagom-java-openshift-smoketests-service"
           image: "hello-proxy-impl:1.1-SNAPSHOT"
           imagePullPolicy: IfNotPresent
           env:
             - name: "JAVA_OPTS"
               value: "-Dconfig.resource=application-prod.conf -Dplay.server.pidfile.path=/dev/null"
             - name: "DEPLOYMENT_SERVICE_NAME"
-              value: "hello-proxy-lagom-minimal-service"
+              value: "hello-proxy-lagom-java-openshift-smoketests-service"
           ports:
             # application
             - name: http
