@@ -2,20 +2,20 @@
 apiVersion: "apps/v1beta2"
 kind: Deployment
 metadata:
-  name: "hello-proxy-lagom-java-openshift-smoketests-service-v1-1-snapshot"
+  name: "hello-proxy-lagom-java-os-smoketests-service-v1-1-snapshot"
   labels:
     appName: "hello-proxy-lagom-java-openshift-smoketests-service"
-    appNameVersion: "hello-proxy-lagom-java-openshift-smoketests-service-v1-1-snapshot"
+    appNameVersion: "hello-proxy-lagom-java-os-smoketests-service-v1-1-snapshot"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      appNameVersion: "hello-proxy-lagom-java-openshift-smoketests-service-v1-1-snapshot"
+      appNameVersion: "hello-proxy-lagom-java-os-smoketests-service-v1-1-snapshot"
   template:
     metadata:
       labels:
         appName: "hello-proxy-lagom-java-openshift-smoketests-service"
-        appNameVersion: "hello-proxy-lagom-java-openshift-smoketests-service-v1-1-snapshot"
+        appNameVersion: "hello-proxy-lagom-java-os-smoketests-service-v1-1-snapshot"
     spec:
       restartPolicy: Always
       containers:
@@ -31,13 +31,11 @@ spec:
             # application
             - name: http
               containerPort: 9000
-
           resources:
             limits:
-              cpu: 0.15
+              cpu: 1
               memory: 512Mi
             requests:
-              cpu: 0.15
+              cpu: 1
               memory: 512Mi
-
       volumes: []
