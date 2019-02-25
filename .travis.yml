@@ -1,11 +1,19 @@
-sudo: false
 language: java
-jdk:
-- openjdk8
-install: true
-script: mvn compile 
+scala: 2.12.8
+
+before_install: curl -Ls https://git.io/jabba | bash && . ~/.jabba/jabba.sh
+install: jabba install adopt@1.8.192-12 && jabba use $_ && java -version
+script: mvn test
 
 cache:
   directories:
     - $HOME/.m2
     - $HOME/.nvm
+    - $HOME/.jabba/jdk
+
+before_cache:
+  - rm -rf $HOME/.m2/repository/com/lightbend/lagom
+
+notifications:
+  email:
+    on_success: never
