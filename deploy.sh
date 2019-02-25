@@ -9,6 +9,7 @@ export TAG=1.1-SNAPSHOT
 export DOCKER_REGISTRY_SERVER=docker-registry-default.centralpark.lightbend.com
 export DOCKER_REGISTRY=$DOCKER_REGISTRY_SERVER/$OPENSHIFT_PROJECT
 
+
 TOKEN=$1
 
 oc login https://$OPENSHIFT_SERVER --token=$TOKEN
