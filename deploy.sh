@@ -36,3 +36,6 @@ docker push $DOCKER_REGISTRY/$IMAGE_HELLO_PROXY:$TAG
 
 kustomize build deployment/overlays/openshift | oc apply -f -
 
+
+echo "Try this deployment using:"
+echo 'curl -H "Host: my-lagom-openshift-smoketests.example.org"  http://$OPENSHIFT_PROJECT.$OPENSHIFT_SERVER/proxy/rest-hello/alice'
