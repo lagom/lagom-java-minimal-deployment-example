@@ -108,12 +108,7 @@
             <dependency>
                 <groupId>com.lightbend.akka.discovery</groupId>
                 <artifactId>akka-discovery-kubernetes-api_${scala.binary.version}</artifactId>
-                <version>1.0.0-RC2</version>
-            </dependency>
-            <dependency>
-                <groupId>com.lightbend.lagom</groupId>
-                <artifactId>lagom-javadsl-akka-discovery-service-locator_${scala.binary.version}</artifactId>
-                <version>0.0.12</version>
+                <version>1.0.0</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -126,6 +121,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <scala.binary.version>2.12</scala.binary.version>
-        <lagom.version>1.5.0</lagom.version>
+        <lagom.version>1.5.1</lagom.version>
     </properties>
 </project>
